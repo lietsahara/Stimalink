@@ -1,5 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/power-connect-circle/(.*)", "destination": "/$1" }
-  ]
-}
