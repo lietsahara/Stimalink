@@ -45,7 +45,12 @@ const cityCoords: Record<string, [number, number]> = {
   'nakuru': [-0.3031, 36.0800],         // Rift Valley
   'eldoret': [0.5143, 35.2693],         // Rift Valley
   'turkana': [3.0111, 35.5978],         // Northern Kenya
-  'johannesburg': [-26.2041, 28.0473],  // South Africa
+  'johannesburg': [-26.2041, 28.0473],
+  'cape town': [-33.9249, 18.4241],
+  'durban': [-29.8587, 31.0218],
+  'pretoria': [-25.7479, 28.2293],
+  'bloemfontein': [-29.0852, 26.1596],
+  'port elizabeth': [-33.9608, 25.6022],
 };
   
   const onSubmit = async (data: ProducerFormData) => {
