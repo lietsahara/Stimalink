@@ -150,7 +150,7 @@ const Supplier = () => {
                       className="flex-1"
                     >
                       <Mail className="w-4 h-4 mr-2" />
-                      Copy Contact
+                      View supplier
                     </Button>
                     <Button
                       variant="outline"
