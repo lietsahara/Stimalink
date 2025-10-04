@@ -121,14 +121,14 @@ const Landing = ({ onStartDemo }: LandingProps) => {
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-12 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">The Future Marketplace</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-              This MVP is just Phase 1. Our roadmap includes full ML predictions, a P2P marketplace for sellers to offer excess energy to buyers in local mini-grids, bidding systems, integrated payments and regulatory guidance, building a complete platform for renewable energy projects.
+              Our roadmap includes full ML predictions, a P2P marketplace for sellers to offer excess energy to buyers in local mini-grids, bidding systems, integrated payments and regulatory guidance, building a complete platform for renewable energy projects.
             </p>
             <Button
               size="lg"
               onClick={onStartDemo}
               className="shadow-[var(--shadow-strong)]"
             >
-              Try the MVP Now
+              Try the App Now
             </Button>
           </div>
         </div>
