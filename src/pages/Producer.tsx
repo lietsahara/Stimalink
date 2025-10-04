@@ -37,16 +37,17 @@ const Producer = () => {
 
   const energyType = watch('energyType');
 
-  // Sample coordinates for common cities (simplified)
-  const cityCoords: Record<string, [number, number]> = {
-    'new york': [40.7128, -74.006],
-    'los angeles': [34.0522, -118.2437],
-    'chicago': [41.8781, -87.6298],
-    'san francisco': [37.7749, -122.4194],
-    'denver': [39.7392, -104.9903],
-    'seattle': [47.6062, -122.3321],
-  };
-
+  // Sample coordinates for cities in Kenya and Johannesburg
+const cityCoords: Record<string, [number, number]> = {
+  'nairobi': [-1.2921, 36.8219],        // Capital of Kenya
+  'mombasa': [-4.0435, 39.6682],        // Coastal kenya
+  'kisumu': [-0.0917, 34.7679],         // Western Kenya
+  'nakuru': [-0.3031, 36.0800],         // Rift Valley
+  'eldoret': [0.5143, 35.2693],         // Rift Valley
+  'turkana': [3.0111, 35.5978],         // Northern Kenya
+  'johannesburg': [-26.2041, 28.0473],  // South Africa
+};
+  
   const onSubmit = async (data: ProducerFormData) => {
     setLoading(true);
     setShowMatches(false);
@@ -54,7 +55,7 @@ const Producer = () => {
     try {
       // Get coordinates (simplified - in real app would use geocoding API)
       const cityKey = data.location.toLowerCase();
-      const coords = cityCoords[cityKey] || [39.8283, -98.5795]; // Default to center US
+      const coords = cityCoords[cityKey] || [-0.0236, 37.9062]; // Center of Kenya
       
       const prediction = await mockApi.getPrediction({
         lat: coords[0],
@@ -137,7 +138,7 @@ const Producer = () => {
                     <Label htmlFor="location">Location</Label>
                     <Input
                       id="location"
-                      placeholder="e.g., New York, Los Angeles, Chicago"
+                      placeholder="e.g., Nairobi, Turkana, Joahanesburg"
                       {...register('location', { required: 'Location is required' })}
                     />
                     {errors.location && (
