@@ -143,7 +143,7 @@ const cityCoords: Record<string, [number, number]> = {
                     <Label htmlFor="location">Location</Label>
                     <Input
                       id="location"
-                      placeholder="e.g., Nairobi, Turkana, Joahanesburg"
+                      placeholder="e.g., Nairobi, Turkana, Joahannesburg"
                       {...register('location', { required: 'Location is required' })}
                     />
                     {errors.location && (
